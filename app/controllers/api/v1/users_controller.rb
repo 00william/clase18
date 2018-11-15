@@ -1,13 +1,19 @@
 module Api
     module V1
         class UsersController < ApplicationController
+            def Index
+                @user = User.all
+            end
+            
             # Agregar acceso de autorización
             before_action :authenticate_with_token!, only: [:update, :destroy]
             respond_to :json
 
             # Leer usuario (HTTP verb GET)
             def show
+                @user = User.find params[:id]
                 respond_with User.find(params[:id])
+                #respond_with User.find(params[:id])
             end
 
             # Crear usuario (HTTP verb POST)
