@@ -13,7 +13,7 @@ module Api
             # Leer usuario (HTTP verb GET)
             def show
                 @user = User.find params[:id]
-                render json: {status: 'SUCCESS', message: 'Show user', data: @user}, status: :ok
+                render json: {status: 'SUCCESS', message: 'Show user', data: @user.id}, status: :ok
                 #respond_with @user
                 #respond_with User.find(params[:id])
             end
