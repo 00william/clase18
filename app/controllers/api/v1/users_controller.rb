@@ -5,7 +5,7 @@ module Api
             before_action :authenticate_with_token!, only: [:update, :destroy]
             respond_to :json
 
-            def Index
+            def index
                 @user = User.all
                 render json: {status: 'SUCCESS', message: 'Show all users', data: @user}, status: :ok
             end
