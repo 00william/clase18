@@ -7,14 +7,13 @@ module Api
 
             def Index
                 @user = User.all
-                respond_with @user
+                render json: {status: 'SUCCESS', message: 'Show all users', data: @user}, status: :ok
             end
 
             # Leer usuario (HTTP verb GET)
             def show
                 @user = User.find params[:id]
                 render json: {status: 'SUCCESS', message: 'Show user', data: @user}, status: :ok
-                #respond_with @user
                 #respond_with User.find(params[:id])
             end
 
