@@ -57,14 +57,14 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  # database: blog_test
-  database: dell7l9lkuudp9
-  username: gydntbsqrutdgu
-  host: ec2-174-129-18-98.compute-1.amazonaws.com
-  port: 5432
-  password: ec40d4cdf804bd334465943f3ab8b84739b7e5d7722569a35d4c3c29636878f3
-  DATABASE_URL="postgres://gydntbsqrutdgu:ec40d4cdf804bd334465943f3ab8b84739b7e5d7722569a35d4c3c29636878f3@ec2-174-129-18-98.compute-1.amazonaws.com:5432/dell7l9lkuudp9"
-  url: <%= ENV['DATABASE_URL'] %>
+  database: blog_test
+  # database: dell7l9lkuudp9
+  # username: gydntbsqrutdgu
+  # host: ec2-174-129-18-98.compute-1.amazonaws.com
+  # port: 5432
+  # password: ec40d4cdf804bd334465943f3ab8b84739b7e5d7722569a35d4c3c29636878f3
+  # DATABASE_URL="postgres://gydntbsqrutdgu:ec40d4cdf804bd334465943f3ab8b84739b7e5d7722569a35d4c3c29636878f3@ec2-174-129-18-98.compute-1.amazonaws.com:5432/dell7l9lkuudp9"
+  # url: <%= ENV['DATABASE_URL'] %>
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -87,13 +87,13 @@ test:
 #
 production:
   <<: *default
-  # database: blog_production
-  # username: blog
-  # password: <%= ENV['BLOG_DATABASE_PASSWORD'] %>
-  database: dell7l9lkuudp9
-  username: gydntbsqrutdgu
-  host: ec2-174-129-18-98.compute-1.amazonaws.com
-  port: 5432
-  password: ec40d4cdf804bd334465943f3ab8b84739b7e5d7722569a35d4c3c29636878f3
-  DATABASE_URL="postgres://gydntbsqrutdgu:ec40d4cdf804bd334465943f3ab8b84739b7e5d7722569a35d4c3c29636878f3@ec2-174-129-18-98.compute-1.amazonaws.com:5432/dell7l9lkuudp9"
-  url: <%= ENV['DATABASE_URL'] %>
+  database: blog_production
+  username: blog
+  password: <%= ENV['BLOG_DATABASE_PASSWORD'] %>
+  # database: dell7l9lkuudp9
+  # username: gydntbsqrutdgu
+  # host: ec2-174-129-18-98.compute-1.amazonaws.com
+  # port: 5432
+  # password: ec40d4cdf804bd334465943f3ab8b84739b7e5d7722569a35d4c3c29636878f3
+  # DATABASE_URL="postgres://gydntbsqrutdgu:ec40d4cdf804bd334465943f3ab8b84739b7e5d7722569a35d4c3c29636878f3@ec2-174-129-18-98.compute-1.amazonaws.com:5432/dell7l9lkuudp9"
+  # url: <%= ENV['DATABASE_URL'] %>
